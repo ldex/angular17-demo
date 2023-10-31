@@ -1,0 +1,32 @@
+@if (product$ | async; as product) {
+    <div class="side-form">
+        <h2>{{product.name | uppercase}}</h2>
+        @if (product.imageUrl) {
+            <img style="float:right" [src]="product.imageUrl" width="250" />
+        }
+        <h3>{{product.description}}</h3>
+        <p>Price: {{product.price | currency:'CAD':'symbol-narrow':'.2'}}</p>
+        <p>Fixed price? {{product.fixedPrice}}</p>
+        <p>Discontinued? {{product.discontinued}}
+        </p>
+        <p>Modified date:
+            {{product.modifiedDate | date}}</p>
+        <p>
+
+            <button (click)="confirm.showModal()">Delete Product</button>
+            <dialog #confirm>
+            <p>Are you sure to delete this product ?</p>
+            <div class="right">
+                <button (click)="deleteProduct(product.id)" autofocus>Ok</button>
+                &nbsp;
+                <button (click)="confirm.close()">Cancel</button>
+            </div>
+            </dialog>
+        </p>
+        <p>
+        <button routerLink="/products">< Back to list</button>
+        </p>
+    </div>
+} @else {
+    <h2>No product to display!</h2>
+}

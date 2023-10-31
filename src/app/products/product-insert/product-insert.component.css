@@ -1,0 +1,28 @@
+.errorMessage {
+    color: red;
+}
+input.ng-touched.ng-valid,
+textarea.ng-touched.ng-valid {
+  border: 3px solid green;
+}
+
+input.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid {
+  border: 3px solid red;
+}
+
+input:active, 
+input:focus, 
+input:hover, 
+textarea:active, 
+textarea:focus, 
+textarea:hover { 
+  background-color: lightyellow; 
+  border-color: yellow; 
+} 
+
+label {
+    clear: both;
+    float:left;
+    width: 120px;
+}

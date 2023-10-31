@@ -1,0 +1,47 @@
+@if (errorMessage) {
+<div class="errorMessage">
+    {{ errorMessage }}
+  </div>
+} @else {
+  <div>
+    <h2>{{ title }}</h2>
+    @if (hasProducts()) {
+      <div class="right">
+        {{ productsNumber() }} products listed
+       </div>
+
+      <div>
+        <button (click)="sortList('price')">Sort by price</button>
+        <button (click)="sortList('name')">Sort by name</button>
+        <button (click)="sortList('modifiedDate')">Sort by date</button>
+      </div>
+
+      <ul class="products">
+        @for (product of products() | orderBy:[sorter] | slice:start:end; track product.id) {
+            <li [title]="product | json" (click)="onSelect(product)"
+            [class.discontinued]="product.discontinued" [class.selected]="product === selectedProduct">
+            <span class="name">{{ product.name | uppercase }}</span>
+            <span class="description">{{ product.description }}</span>
+            <span class="price">{{ product.price | currency:'CAD':'symbol-narrow':'.2' }}</span>
+            </li>
+        } @empty {
+            <li>No products</li>
+        }
+      </ul>
+
+      <div class="left">
+        <a routerLink="insert">Add new product...</a>
+      </div>
+
+      <div class="right">
+        <button (click)="previousPage()" [disabled]="start == 0">< Previous Page</button>
+        Page {{ currentPage }}
+        @if (productsNumber() > end) {
+            <button (click)="nextPage()">Next Page ></button>
+        }
+      </div>
+    } @else {
+        <h2 class="loading">Loading products</h2>
+    }
+  </div>
+}

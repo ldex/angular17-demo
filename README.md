@@ -38,7 +38,3 @@ ng s -o --hmr
 ```
 
 The app is running on `http://localhost:4200/` and will automatically reload if you change/save any of the source files.
-
-## Try it live in Stackblitz without installation!
-
-<a href="https://stackblitz.com/github/ldex/Angular-Academy-339" target="_blank">Angular Demo App</a>

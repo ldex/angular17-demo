@@ -1,140 +1,109 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Master Styles */
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-    margin: 0px;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-    margin-top: 0.5em;
-  }
-  /* Required for fadeIn animation */
-  ng-component,
-  ng-component app-product-list {
-    display: block;
-  }
-  body, input[text], button {
-    color: #888;
-    font-family: Cambria, Georgia;
-  }
-  a {
-    cursor: pointer;
-    cursor: hand;
-  }
-  button {
-    font-family: Arial;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-  }
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
-  }
-  footer {
-    padding-top: 10px;
-    clear: both;
-  }
-  .left {
-    float: left;
-  }
+  color: #5c44e4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  margin: 0px;
+}
+h2,
+h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+  margin-top: 0.5em;
+}
+body,
+input[text],
+button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+button:hover {
+  background-color: #0546FF;
+  color: #fff;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+footer {
+  padding-top: 10px;
+  clear: both;
+}
+.left {
+  float: left;
+}
 
-  .right {
-    float: right;
-  }
+.right {
+  float: right;
+}
 
-  /* Navigation link styles */
-  nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-  }
-  nav a:visited, a:link {
-    color: #607D8B;
-  }
-  nav a:hover {
-    color: #039be5;
-    background-color: #CFD8DC;
-  }
-  nav a.active {
-    color: #039be5;
-    background-color: yellow;
-  }
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited,
+a:link {
+  color: #607d8b;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+nav a.active {
+  color: #039be5;
+  background-color: yellow;
+}
 
-  .errorMessage {
-    color: red;
-  }
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+*[disabled] {
+  cursor: not-allowed;
+}
 
-  *[disabled] {
-    cursor: not-allowed;
-  }
+.errorMessage {
+  color: red;
+}
 
-  /* loading spinner */
-  .loading {
-    display: inline-block;
-    overflow: hidden;
-    height: 1.3em;
-    margin-top: -0.3em;
-    line-height: 1.5em;
-    vertical-align: text-bottom;
-  }
-
-  .loading::after {
-    display: inline-table;
-    white-space: pre;
-    text-align: left;
-    content: "◎◎◎\A◉◎◎\A◎◉◎\A◎◎◉";
-    animation: spin 1s steps(4) infinite;
-  }
-
-  @keyframes spin  { to { transform: translateY( -6.0em); } }
-
-  .modal-loading {
-    display: block;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) url('https://i.stack.imgur.com/FhHRx.gif') 50% 30% no-repeat;
-  }
-
-  dialog {
-    background-color: rgba(32, 82, 221);
-    color: white;
-    border-color: transparent;
-    overflow: hidden;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 20px 8px #d0d0d0;
-    height: 100px;
-    width: 200px;
-  }
-  dialog::backdrop {
-    background: rgba(117, 117, 117, 0.5);
-    backdrop-filter: blur(2px);
-  }
+dialog {
+  background-color: rgba(32, 82, 221);
+  color: white;
+  border-color: transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  height: 100px;
+  width: 200px;
+}
+dialog::backdrop {
+  background: rgba(117, 117, 117, 0.5);
+  backdrop-filter: blur(2px);
+}

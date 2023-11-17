@@ -11,7 +11,7 @@ import { OrderBy } from '../../utils/orderBy.pipe'
   standalone: true,
   imports: [CommonModule, RouterModule, OrderBy],
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
 

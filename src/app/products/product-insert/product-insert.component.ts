@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './product-insert.component.html',
-  styleUrls: ['./product-insert.component.css'],
+  styleUrl: './product-insert.component.css'
 })
 export class ProductInsertComponent implements OnInit {
   insertForm!: FormGroup;

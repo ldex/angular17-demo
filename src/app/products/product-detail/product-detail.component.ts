@@ -10,7 +10,7 @@ import { ProductService } from '../../services/product.service';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  styleUrl: './product-detail.component.css'
 })
 export class ProductDetailComponent {
   @Input() product!: Product;

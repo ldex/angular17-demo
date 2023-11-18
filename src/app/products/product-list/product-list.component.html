@@ -11,9 +11,9 @@
        </div>
 
       <div>
-        <button (click)="sortList('price')">Sort by price</button>
-        <button (click)="sortList('name')">Sort by name</button>
-        <button (click)="sortList('modifiedDate')">Sort by date</button>
+        <button (click)="sortList('price')" [class.currentSort]="sorter.includes('price')">Sort by price</button>
+        <button (click)="sortList('name')" [class.currentSort]="sorter.includes('name')">Sort by name</button>
+        <button (click)="sortList('modifiedDate')" [class.currentSort]="sorter.includes('modifiedDate')">Sort by date</button>
       </div>
 
       <ul class="products">

@@ -1,8 +1,12 @@
 /* Master Styles */
 h1 {
-  color: #5c44e4;
+  display: inline;
+  background:  linear-gradient(75deg, rgba(241,22,83,1) 8%, rgba(233,4,100,1) 21%, rgba(220,8,125,1) 44%, rgba(151,23,231,1) 74%, rgba(92,68,228,1) 92%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
+  font-weight: 800;
   margin: 0px;
 }
 h2,
@@ -22,8 +26,11 @@ button {
   font-family: Cambria, Georgia;
 }
 a {
-  cursor: pointer;
   cursor: hand;
+  color: #F637E3;
+}
+a:hover {
+  color: #0546FF;
 }
 button {
   font-family: Arial;
@@ -31,6 +38,7 @@ button {
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
+  color: #607d8b;
   cursor: pointer;
   cursor: hand;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
@@ -59,24 +67,33 @@ footer {
 
 /* Navigation link styles */
 nav a {
-  padding: 5px 10px;
+  background-color: #EEE;
+  color: #5C44E4;
+  border: 2px solid #5C44E4;
   text-decoration: none;
-  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  position: relative;
+  transition: box-shadow .35s,top .3s,transform .45s;
+  top: 0;
+  left: 0;
   display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited,
-a:link {
-  color: #607d8b;
+  box-shadow: 0 1px 0 0 #5C44E4,0 2px 0 0 #5C44E4,0 3px 0 0 #5C44E4;
+  transform: rotateX(0) rotateY(0) rotateZ(0);
 }
 nav a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
+  color: #5C44E4;
+  box-shadow: 0 0 0 0 #5C44E4,0 0 0 0 #5C44E4,0 0 0 0 #5C44E4;
+  top: 3px;
+  transform: rotateX(5deg) rotateY(10deg) rotateZ(.5deg);
 }
 nav a.active {
-  color: #039be5;
-  background-color: yellow;
+  background-color: #F637E3;
+  color: #FFF;
+  box-shadow: 0 0 0 0;
+  top: 3px;
+  border: 2px solid #5C44E4!important;
+  outline: 0;
 }
 
 /* everywhere else */
@@ -93,9 +110,10 @@ nav a.active {
 }
 
 dialog {
-  background-color: rgba(32, 82, 221);
+  background: rgb(241,22,83);
+  background: linear-gradient(75deg, rgba(241,22,83,1) 8%, rgba(233,4,100,1) 21%, rgba(220,8,125,1) 44%, rgba(151,23,231,1) 74%, rgba(92,68,228,1) 92%);
   color: white;
-  border-color: transparent;
+  border-color: #000;
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;

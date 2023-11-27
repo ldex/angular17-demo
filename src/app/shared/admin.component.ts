@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './admin.component.html',
     standalone: true
 })
-export class AdminComponent {
+export default class AdminComponent {
     constructor() { }
 
 }
